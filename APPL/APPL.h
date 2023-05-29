@@ -10,4 +10,6 @@ void  T_TV(void);
 void  T_DINE(void);
 void  T_READING(void);
 
+int compareTwoString(char a[],char b[]); 
+
 #endif

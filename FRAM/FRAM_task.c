@@ -10,21 +10,23 @@ void T_activity_of_day(SINT hour, SINT minute )
         return;
     }
 
-    if (hour < 7 || (hour == 6 && minute < 59)) {
-        T_SLEEP();
-    } else if (hour < 9 || (hour == 9 && minute < 59)) {
+    if (hour < 7 || (hour == 7 && minute < 10)) {
+        T_SLEEP();  // 1. To ask what to do 
+
+
+    } else if (hour < 9 || (hour == 9 && minute < 10)) {
         T_BREAKFAST();
-    } else if (hour < 11 || (hour == 11 && minute < 59)) {
+    } else if (hour < 11 || (hour == 11 && minute < 10)) {
         T_JUICE();
-    } else if (hour < 13 || (hour == 13 && minute < 59)) {
+    } else if (hour < 13 || (hour == 13 && minute < 10)) {
         T_LUNCH();
-    } else if (hour < 15 || (hour == 15 && minute < 59)) {
+    } else if (hour < 15 || (hour == 15 && minute < 10)) {
         T_WALK();
-    } else if (hour < 17 || (hour == 17 && minute < 59)) {
+    } else if (hour < 17 || (hour == 17 && minute < 10)) {
         T_TV();
-    } else if (hour < 19 || (hour == 19 && minute < 59)) {
+    } else if (hour < 19 || (hour == 19 && minute < 10)) {
         T_DINE();
-    } else if (hour < 21 || (hour == 21 && minute < 59)) {
+    } else if (hour < 21 || (hour == 21 && minute < 10)) {
         T_READING();
     } else {
         printf("Other Activities\n");
