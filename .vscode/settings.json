@@ -2,6 +2,7 @@
     "files.associations": {
         "fram_task.h": "c",
         "dat.h": "c",
-        "appl.h": "c"
+        "appl.h": "c",
+        "unistd.h": "c"
     }
 }

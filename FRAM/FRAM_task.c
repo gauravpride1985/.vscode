@@ -1,4 +1,25 @@
+/* 
+ *------------------------------------------------------------------------------
+ *        --- source file ---
+ *----------------------------------------------------------------------------*/
+/*!
+ * \file
+ * \author Gaurav Kumar 
+ * \date   29.05.2023
+ *
+ * \brief  The Task schedular defination
+ **
+ */
+/*====================================================================={end}==*/
+
+
+
+/*---- Includes: system-------------------------------------------------------------*/
+
 #include <stdio.h>
+
+/*---- Includes: public -------------------------------------------------------------*/
+
 #include "../DAT/DAT.h"
 #include "FRAM_task.h"
 
@@ -9,9 +30,9 @@ void T_activity_of_day(SINT hour, SINT minute )
         printf("Invalid input!\n");
         return;
     }
-
+     /*0 - 7 hour */
     if (hour < 7 || (hour == 7 && minute < 10)) {
-        T_SLEEP(hour,minute);  // 1. To ask what to do 
+        T_SLEEP(hour,minute);  
     } else if (hour < 9 || (hour == 9 && minute < 10)) {
         T_BREAKFAST(hour,minute);
     } else if (hour < 11 || (hour == 11 && minute < 10)) {
@@ -27,7 +48,7 @@ void T_activity_of_day(SINT hour, SINT minute )
     } else if (hour < 21 || (hour == 21 && minute < 10)) {
         T_READING(hour,minute);
     } else {
-        printf("Other Activities\n");
+        printf("Other Activities\n");  /*21 - 24 h*/
     }
 
 }

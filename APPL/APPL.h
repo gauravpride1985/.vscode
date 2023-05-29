@@ -1,3 +1,17 @@
+/* 
+ *------------------------------------------------------------------------------
+ *        --- public header ---
+ *----------------------------------------------------------------------------*/
+/*!
+ * \file
+ * \author Gaurav Kumar 
+ * \date   29.05.2023
+ *
+ * \brief  User application activities declaration 
+ **
+ */
+/*====================================================================={end}==*/
+
 #ifndef APPL_H_
 #define APPL_H_
 
@@ -11,8 +25,6 @@ void  T_WALK(SINT,SINT);
 void  T_TV(SINT,SINT);
 void  T_DINE(SINT,SINT);
 void  T_READING(SINT,SINT);
-
-void delay(void);
 
 int compareTwoString(UCHAR a[],UCHAR b[]); 
 

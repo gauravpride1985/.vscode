@@ -1,49 +1,70 @@
+/* 
+ *------------------------------------------------------------------------------
+ *        --- source file ---
+ *----------------------------------------------------------------------------*/
+/*!
+ * \file
+ * \author Gaurav Kumar 
+ * \date   29.05.2023
+ *
+ * \brief  The user application, all day activity defination
+ **
+ */
+/*====================================================================={end}==*/
+
+/*---- Includes: system-------------------------------------------------------------*/
 #include <stdio.h>
+#include <unistd.h>   // Using the Linux standard library as delay using for loop wasn't accurate 
+
+/*---- Includes: public -------------------------------------------------------------*/
+
 #include "APPL.h"
 #include "../DAT/DAT_type.h"
 #include "../DAT/DAT.h"
 
+/*---- Definition of user varaible and macros: -----------------------------*/
 #define MAX_LENGTH 100
 
 UCHAR input_fixed[]="yes";    
-T_Status status_e = T_UNDONE;  //Any task updates the STATE
+T_Status status_e = T_UNDONE;  //Any application task can updates the status
 
 void T_SLEEP(SINT hour,SINT minute)
 {
-UCHAR input[MAX_LENGTH];
+    UCHAR input[MAX_LENGTH];
 
-if( status_e == T_DONE)
-printf("Chill,Gradma alreay having Breakfast");
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma alreay having Breakfast \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 6) && (minute == 50))
+        {
+                printf(" T_SLEEP: Scheduled Task about to finish \n");
+                return;
+        }
 
-printf("GrandMa Time to Sleep \n");
-printf("Sleep Scheduled at %d:%d \n",hour,minute);
-// Wait for 3 sec 
-delay();
-
-printf("GrandMa are you still Sleeping \n");
-
-
-printf("Please answer yes or no \n");
-scanf("%s",input);
-//fgets(input, MAX_LENGTH, stdin);
-
-UINT result = compareTwoString(input,input_fixed);
-
-if(result == 0 )
-{
-    status_e=T_DONE;  // Update the state of task
-    printf(" SLEEPING: Scheduled Task finish \n ");
-}
-else
-{
-    status_e=T_UNDONE;  // Update the state of task
+    printf("GrandMa Time to Sleep \n");
+    printf("Sleep Scheduled at %d:%d \n",hour,minute);
     
-    // wait till 10 mins before total time
-    delay();
-    status_e=T_DONE;
-    printf(" T_SLEEP: Scheduled Task finish ");
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still Sleeping ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
 
-}
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" SLEEPING: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+             printf(" STATE IS UNDONE \n ");
+        }
 
 }
 
@@ -102,9 +123,13 @@ int compareTwoString(UCHAR a[],UCHAR b[])
     return 1;  
 } 
 
+/*Not accurate time delay so using linux sleep() */
+/*
 void delay()
 {
-    UINT delay_UNIT;
-    for(delay_UNIT =0; delay_UNIT < 10000 ; delay_UNIT ++);
+    double delay_UNIT;
+    for(delay_UNIT =0; delay_UNIT < 100000 ; delay_UNIT++)
+        for(delay_UNIT =0; delay_UNIT < 100000 ; delay_UNIT++);
 
 }
+*/
