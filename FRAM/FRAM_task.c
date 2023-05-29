@@ -11,27 +11,26 @@ void T_activity_of_day(SINT hour, SINT minute )
     }
 
     if (hour < 7 || (hour == 7 && minute < 10)) {
-        T_SLEEP();  // 1. To ask what to do 
-
-
+        T_SLEEP(hour,minute);  // 1. To ask what to do 
     } else if (hour < 9 || (hour == 9 && minute < 10)) {
-        T_BREAKFAST();
+        T_BREAKFAST(hour,minute);
     } else if (hour < 11 || (hour == 11 && minute < 10)) {
-        T_JUICE();
+        T_JUICE(hour,minute);
     } else if (hour < 13 || (hour == 13 && minute < 10)) {
-        T_LUNCH();
+        T_LUNCH(hour,minute);
     } else if (hour < 15 || (hour == 15 && minute < 10)) {
-        T_WALK();
+        T_WALK(hour,minute);
     } else if (hour < 17 || (hour == 17 && minute < 10)) {
-        T_TV();
+        T_TV(hour,minute);
     } else if (hour < 19 || (hour == 19 && minute < 10)) {
-        T_DINE();
+        T_DINE(hour,minute);
     } else if (hour < 21 || (hour == 21 && minute < 10)) {
-        T_READING();
+        T_READING(hour,minute);
     } else {
         printf("Other Activities\n");
     }
 
 }
+
 
 
