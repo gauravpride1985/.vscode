@@ -20,7 +20,7 @@
 
 /*---- Declaration of private functions --------------------------------------*/
 
-void T_activity_of_day(SINT,SINT);
+void T_activity_of_day(SINT,SINT,UINT);
 
 
 

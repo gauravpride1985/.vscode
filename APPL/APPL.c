@@ -34,9 +34,9 @@ void T_SLEEP(SINT hour,SINT minute)
 
     if( status_e == T_DONE)
         {
-            printf("Chill,Gradma alreay having Breakfast \n");
+            printf("Chill,Gradma already have Slept \n");
         }
-    else if ( (status_e==T_UNDONE) && (hour== 6) && (minute == 50))
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
         {
                 printf(" T_SLEEP: Scheduled Task about to finish \n");
                 return;
@@ -63,43 +63,295 @@ void T_SLEEP(SINT hour,SINT minute)
         else 
         {
             status_e=T_UNDONE;  // Update the state of task
-             printf(" STATE IS UNDONE \n ");
+            //printf(" STATE IS UNDONE \n ");
         }
 
 }
 
 void T_BREAKFAST(SINT hour,SINT minute)
 {
-printf("GrandMa Time to Breakfast ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already had Breakfast \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_BREAKFAST: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to have Breakfast \n");
+    printf("Breakfast Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still having Breakfast ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" Breakfast: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n "); // Only STATE update required
+        }
+
 }
 
 void T_JUICE(SINT hour,SINT minute)
 {
-printf("GrandMa Time to Have Juice ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already have JUICE \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_JUICE: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to have JUICE \n");
+    printf("JUICE Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still having JUICE ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" JUICE: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n ");
+        }
+
 }
 
 void T_LUNCH(SINT hour,SINT minute)
 {
-printf("GrandMa Time to Have Lunch ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already had LUNCH \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_LUNCH: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to have LUNCH \n");
+    printf("LUNCH Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still having LUNCH ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" LUNCH: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n ");
+        }
+
 }
 
 void T_TV(SINT hour,SINT minute)
 {
-printf("GrandMa Time to Watch TV ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already have seen TV \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_TV: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to TV \n");
+    printf("TV Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still wathing TV ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" TV: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n ");
+        }
+
 }
 
 void T_WALK(SINT hour,SINT minute)
 {
-printf("GrandMa Time to to Walk ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already had WALK \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_WALK: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to WALK \n");
+    printf("WALK Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still WALKING ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" WALK: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n ");
+        }
+
 }
 
 void T_DINE(SINT hour,SINT minute)
 {
-printf("GrandMa Time to have dinner ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already have DINE \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_DINE: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to Sleep \n");
+    printf("Sleep Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still having DINNER  ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" DINNER: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n ");
+        }
+
 }
 void T_READING(SINT hour,SINT minute)
 {
-printf("GrandMa Time to read some books ");
+
+    UCHAR input[MAX_LENGTH];
+
+    if( status_e == T_DONE)
+        {
+            printf("Chill,Gradma already done READING \n");
+        }
+    else if ( (status_e==T_UNDONE) && (hour== 5) && (minute == 50))
+        {
+                printf(" T_READING: Scheduled Task about to finish \n");
+                return;
+        }
+
+    printf("GrandMa Time to READ \n");
+    printf("READ Scheduled at %d:%d \n",hour,minute);
+    
+    // Wait for 3 sec 
+    // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
+    sleep(3);
+       
+    printf("GrandMa , Are you still READING ? \n");
+    printf("Please reply yes or no \n");
+    scanf("%s",input);
+
+    UINT result = compareTwoString(input,input_fixed);
+
+        if(result == 0 )
+        {
+            status_e=T_DONE;  // Update the state of task
+            printf(" READING: Scheduled Task finish \n ");
+        }
+        else 
+        {
+            status_e=T_UNDONE;  // Update the state of task
+            //printf(" STATE IS UNDONE \n ");
+        }
+
 }
 
 
