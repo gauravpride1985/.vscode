@@ -8,10 +8,12 @@
 #define MAX_LENGTH 100
 char input_fixed[]="yes";
 
+T_Status status_e = T_UNDONE;  //Any task updates the STATE
+
 void T_SLEEP()
 {
 char input[MAX_LENGTH];
-T_Status status_e = T_UNDONE;
+
 printf("Welcome %s\n",input);
 printf("GrandMa Time to Sleep \n");
 // Wait for 3 sec 
@@ -25,7 +27,6 @@ scanf("%s",input);
 
 //input[strcspn(input,"\n")] = '\0';
 UINT result = compareTwoString(input,input_fixed);
-
 
 if(result == 0 )
 status_e=T_DONE;
