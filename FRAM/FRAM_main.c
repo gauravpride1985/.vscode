@@ -32,6 +32,12 @@
 UCHAR input_gradma[MAX_LENGTH];
 UCHAR input_gradma_now[]="now";
 
+/*------Implemented the Program in Safe Silent State--------*/
+#ifndef SAFE_SILENT_STATE
+  #define SAFE_SILENT_STATE
+#endif
+
+
 UINT SPEED =1;
 
 int main(void)
