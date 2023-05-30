@@ -43,7 +43,7 @@ void T_SLEEP(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to Sleep \n");
-    printf("Sleep Scheduled at %d:%d \n",hour,minute);
+    printf("Sleep Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -84,7 +84,7 @@ void T_BREAKFAST(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to have Breakfast \n");
-    printf("Breakfast Scheduled at %d:%d \n",hour,minute);
+    printf("Breakfast Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -125,7 +125,7 @@ void T_JUICE(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to have JUICE \n");
-    printf("JUICE Scheduled at %d:%d \n",hour,minute);
+    printf("JUICE Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -166,7 +166,7 @@ void T_LUNCH(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to have LUNCH \n");
-    printf("LUNCH Scheduled at %d:%d \n",hour,minute);
+    printf("LUNCH Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -207,7 +207,7 @@ void T_TV(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to TV \n");
-    printf("TV Scheduled at %d:%d \n",hour,minute);
+    printf("TV Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -248,7 +248,7 @@ void T_WALK(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to WALK \n");
-    printf("WALK Scheduled at %d:%d \n",hour,minute);
+    printf("WALK Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -289,7 +289,7 @@ void T_DINE(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to Sleep \n");
-    printf("Sleep Scheduled at %d:%d \n",hour,minute);
+    printf("Sleep Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
@@ -329,7 +329,7 @@ void T_READING(SINT hour,SINT minute)
         }
 
     printf("GrandMa Time to READ \n");
-    printf("READ Scheduled at %d:%d \n",hour,minute);
+    printf("READ Scheduled at %dH:%dM \n",hour,minute);
     
     // Wait for 3 sec 
     // NOTE: Using the Linux standard library as delay using for loop wasn't accurate
